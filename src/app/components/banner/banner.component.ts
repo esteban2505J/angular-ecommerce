@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Product } from 'src/models/product.model';
 
 @Component({
   selector: 'app-banner',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
   content = 'content and more';
+  @Input() product!: Product;
 }

@@ -1,6 +1,13 @@
-<main class="flex flex-col justify-center content-center items-center">
-  <h1 class="text-2xl">{{ title }}</h1>
-  <app-banner />
-</main>
-
-<router-outlet></router-outlet>
+<!-- Here goes the navbar -->
+<!-- <Navbar /> -->
+<div class="container mx-auto">
+  <router-outlet>
+    <main>
+      <h1 class="text-2xl text-center font-bold uppercase">{{ title }}</h1>
+      <p>Some products and more...</p>
+      <div class="grid gap-4 grid-cols-1 grid-flow-row sm:grid-cols-2 md:grid-cols-3">
+        <app-banner *ngFor="let product of products" [product]="product" />
+      </div>
+    </main>
+  </router-outlet>
+</div>
