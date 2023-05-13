@@ -1,9 +1,13 @@
-<div class="w-full h-32 inline-flex border border-black gap-2">
-  <img [ngSrc]="product.images[0]" alt="{{ product.title }} image" width="640" height="640" class="w-52 object-cover" />
-  <div class="information">
-    <div class="font-bold">{{ product.title }}</div>
-    <div class="text-sm text-ellipsis overflow-hidden">
-      {{ product.description }}
+<div class="my-2 relative">
+  <a href="{{ banner.path }}">
+    <img src="{{ banner.image_url }}" alt="#" />
+    <div
+      class="information absolute top-24 left-16 uppercase font-extrabold text-white text-3xl w-10"
+    >
+      {{ banner.title }}
     </div>
+  </a>
+  <div class="my-5 mx-10 uppercase underline">
+    <a href="#" class="hover:text-gray-600">shop {{ banner.title }}</a>
   </div>
 </div>

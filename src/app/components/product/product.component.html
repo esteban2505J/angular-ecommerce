@@ -1,0 +1,19 @@
+<div class="w-full h-32 inline-flex border border-gray-200 gap-2">
+  <img
+    [ngSrc]="product.images[0]"
+    alt="{{ product.title }} image"
+    width="640"
+    height="640"
+    class="w-52 object-cover"
+  />
+  <div class="information">
+    <div class="font-bold">{{ product.title }}</div>
+    <div class="text-sm text-ellipsis overflow-hidden">
+      {{ product.description }}
+    </div>
+    <div class="text-sm">price: {{ product.price }} $</div>
+    <div class="badge text-xs bg-purple-500 text-white rounded p-1 w-fit">
+      {{ product.category.name }}
+    </div>
+  </div>
+</div>
